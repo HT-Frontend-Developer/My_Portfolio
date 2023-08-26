@@ -1,0 +1,360 @@
+/* Start Variable */
+:root {
+    --main-color: #3a6cf4;
+    --second-color: #fff;
+    --main-transition: 0.7s ease;
+    --section-padding: 50px;
+}
+
+/* End Variable */
+
+/* Start Global Rules */
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small Screens */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium Screens */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large Screens */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Global Rules */
+
+/* Start Compontents */
+
+section .title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--main-color);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+section .container-1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* End Compontents */
+/* Start Header */
+header {
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+}
+
+@media (max-width: 767px) {
+    header {
+        position: unset;
+    }
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+
+}
+
+header .container .logo {
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+    /* 1.8em*16px =px  */
+}
+
+header .container nav a {
+    color: var(--main-color);
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+@media (max-width: 767px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 2px;
+    }
+}
+
+header .container nav a:hover {
+    color: #601cfc;
+}
+
+/* End Header */
+/* Start Services */
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../imgs/dark-light-wallpapers.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h2 {
+    color: var(--second-color);
+    font-size: 1.4em;
+    font-weight: 500;
+
+}
+
+.main h2 span {
+    display: block;
+    margin-top: 10px;
+    color: #4e9eff;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.main h3 {
+    color: var(--second-color);
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    color: var(--second-color);
+    background-color: var(--main-color);
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: var(--main-transition);
+}
+
+.main-btn:hover {
+    background-color: #0a49f6;
+    transform: scale(1.1);
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons a {
+    color: var(--second-color);
+    font-size: 1.7em;
+    margin-right: 30px;
+}
+
+.cards {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+
+.cards .container-1 .card {
+    background-color: var(--second-color);
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgb(1 1 1 /15%);
+    border-radius: 10px;
+    padding: 25px 25px 0;
+    text-align: center;
+    transition: var(--main-transition);
+}
+
+.cards .container-1 .card:hover {
+    transform: scale(1.1);
+}
+
+.cards .container-1 .card i {
+    color: var(--main-color);
+    font-size: 5em;
+}
+
+.cards .container-1 .card .info h3 {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 1.2em;
+    margin: 15px;
+}
+
+.cards .container-1 .card .info p {
+    line-height: 1.6;
+}
+
+/* End Services */
+
+/* Start Project */
+
+.projects {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: #000016;
+}
+
+.projects .project-card {
+    background-color: var(--second-color);
+    border: 1px solid var(--second-color);
+    min-height: 14em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: var(--main-transition);
+
+}
+
+.projects .project-card:hover {
+    transform: scale(1.1);
+}
+
+.projects .project-card img {
+    width: 360px;
+}
+
+.projects .project-card:hover img {
+    opacity: 0.9;
+}
+
+.projects .project-card .info {
+    padding: 1em;
+}
+
+.projects .project-card strong {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 5px;
+}
+
+.projects .project-card strong a {
+    color: var(--main-color);
+}
+
+.projects .project-card strong a:hover {
+    color: #601cfc;
+}
+
+/* Start Contact  */
+.contact {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.contact .container-1 .card {
+    background-color: var(--second-color);
+    width: 18.25em;
+    box-shadow: 0 5px 25px rgb(1 1 1 /15%);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    transition: var(--main-transition);
+}
+
+.contact .container-1 .card:hover {
+    transform: scale(1.1);
+}
+
+.contact .container-1 .card i {
+    color: var(--main-color);
+    font-size: 2.5em;
+}
+
+.contact .container-1 .card .info h3 {
+    font-weight: 700;
+    font-size: 1.2em;
+    margin: 15px;
+}
+
+.contact .container-1 .card .info span {
+    display: block;
+}
+
+/* End Contact */
+
+/* Start Footer */
+
+footer {
+    background-color: #000016;
+    color: var(--second-color);
+    padding: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+footer p span {
+    color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+    footer .social-icons {
+        margin-right: -15px;
+    }
+}
+
+/* End Footer */
